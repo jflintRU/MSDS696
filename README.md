@@ -195,6 +195,14 @@ Since I have been around baseball my whole life, I felt as though I had a pretty
  3rd Qu.:22.00   3rd Qu.:0.7870   3rd Qu.:18.00   3rd Qu.:1.0000  
  Max.   :35.00   Max.   :0.9150   Max.   :34.00   Max.   :5.0000  
  
- While the summary function in R provides good information regarding some baseline statistics, it does not help with visualization of the data. I think that a good place to start with data visualization is distribution. I believe this is also an important aspect of the data to examine in this particular case given the relatively small size of the data set. If any variables are extremely skewed to one side or the other in terms of distribution, they may do more harm than good when it comes to modeling. The distribution of each variable can be seen below.
+ While the summary function in R provides good information regarding some baseline statistics, it does not help with visualization of the data. I think that a good place to start with data visualization is distribution. I believe this is also an important aspect of the data to examine in this particular case given the relatively small size of the data set. If any variables are extremely differnt in terms of distribution from the other variables, then they may not be good to include in the model. This being said, most of the variables had a relatively normal distribution with some having a slight positive or negativve skew. There were a couple variables that had a multi-modal distribution, and these two variables can be seen below along with distributions that are representative of the rest of the dataset as well.  
 
-<img src="images/Density_Batt_1.jpeg">
+<img src="images/Density_Pitch_1.jpeg">
+
+Given the relative normality of the data, I thought a good place to get a baseline idea of some variable importance would be doing some correlation analysis. I did a correlation analysis for all the variables in three broad categories of batting, fielding, and pitching, and then visalized the top three from each cateogry. These visualizations can be seen below. 
+
+<img src = "images/Batting_Correlation_Graphs.jpeg">
+<img src = "images/Fielding_Correlation_Graphs.jpeg">
+<img src = "images/Pitching_Correlations_Graphs.jpeg">
+
+
