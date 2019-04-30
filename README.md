@@ -10,63 +10,63 @@ Most of the cleaning that was necessary for this project was done in excel. The 
 
 #Batting Statistics
 
-AVG: Batting Average
-G: Games Played
-AB: At-bats
-R: Runs scored
-H: Hits
-DOUBLES (originally 2B): Doubles
-TRIPLES (originally 3B): Triples
-HR: Homeruns
-RBI: Runs Batted In
-TB: Total Bases
-SLGperc: Slugging Percentage
-BB: Base on Balls (Walks)
-HBP: Hit by Pitch 
-SO: Strikeouts
-GDP: Ground Ball Doubles Plays Hit Into
-Obperc: On-base percentage
-SF: Sacrifice Flies
-SH: Sacrifice Hits
-SBB: Stolen Bases 
-ATT: Stolen Base Attempts
+AVG: Batting Average,
+G: Games Played,
+AB: At-bats,
+R: Runs scored,
+H: Hits,
+DOUBLES (originally 2B): Doubles,
+TRIPLES (originally 3B): Triples,
+HR: Homeruns,
+RBI: Runs Batted In,
+TB: Total Bases,
+SLGperc: Slugging Percentage,
+BB: Base on Balls (Walks),
+HBP: Hit by Pitch,
+SO: Strikeouts,
+GDP: Ground Ball Doubles Plays Hit Into,
+Obperc: On-base percentage,
+SF: Sacrifice Flies,
+SH: Sacrifice Hits,
+SBB: Stolen Bases,
+ATT: Stolen Base Attempts,
 SBB-ATTperc : Stolen Base percentage
 
 #Pitching Statistics
 
-ERA: Earned Run Average
-W: Team Wins
-CG: Complete Games
-SHO: Shutouts
-CBO: Complete Game Shutouts
-SV: Saves
-IP: Innings Pitched
-Hallowed: Hits allowed
-Rallowed: Runs allowed
-ER: Earned Runs
-BBallowed: Walks allowed
-SOfor: Number of strikeouts thrown
-DOUBLESAllowed: Doubles Allowed
-TRIPLESAllowed: Triples Allowed
-HRAllowed: Home Runs Allowed
-ABagainst: At-bats against
-AVGagainst: Batting average against
-WP: Wild Pitches
-HBPpithcing: Number of batters hit by a pitch
-BK: Balks
-SFA: Sacrifice Flies Against
+ERA: Earned Run Average,
+W: Team Wins,
+CG: Complete Games,
+SHO: Shutouts,
+CBO: Complete Game Shutouts,
+SV: Saves,
+IP: Innings Pitched,
+Hallowed: Hits allowed,
+Rallowed: Runs allowed,
+ER: Earned Runs,
+BBallowed: Walks allowed,
+SOfor: Number of strikeouts thrown,
+DOUBLESAllowed: Doubles Allowed,
+TRIPLESAllowed: Triples Allowed,
+HRAllowed: Home Runs Allowed,
+ABagainst: At-bats against,
+AVGagainst: Batting average against,
+WP: Wild Pitches,
+HBPpithcing: Number of batters hit by a pitch,
+BK: Balks,
+SFA: Sacrifice Flies Against,
 SHA: Sacrifice Hits Against
 
-# Fielding Statistics
+#Fielding Statistics
 
-C: Chances
-PO: Put-outs
-A: Assists
-E: Errors
-FLDperc: Fielding Percentage
-DPs: Double Plays Turned
-SBA: Stolen Bases Allowed
-CSB: Caught Stealing By (pitcher and catcher)
-SBAperc: Stolen Bases Allowed percentage
-PB: Passed Balls
-CI: Catcher’s Interference
+C: Chances,
+PO: Put-outs,
+A: Assists,
+E: Errors,
+FLDperc: Fielding Percentage,
+DPs: Double Plays Turned,
+SBA: Stolen Bases Allowed,
+CSB: Caught Stealing By (pitcher and catcher),
+SBAperc: Stolen Bases Allowed percentage,
+PB: Passed Balls,
+CI: Catcher’s Interference,
