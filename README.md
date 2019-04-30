@@ -85,6 +85,7 @@ Since I have been around baseball my whole life, I felt as though I had a pretty
  Mean   :26.28   Mean   :0.3187   Mean   :52.52   Mean   :1718  
  3rd Qu.:33.50   3rd Qu.:0.3360   3rd Qu.:56.00   3rd Qu.:1846  
  Max.   :49.00   Max.   :0.3790   Max.   :63.00   Max.   :2230  
+ 
        R               H            DOUBLES         TRIPLES     
  Min.   :171.0   Min.   :372.0   Min.   : 62.0   Min.   : 2.00  
  1st Qu.:296.5   1st Qu.:473.5   1st Qu.: 87.0   1st Qu.:10.00  
@@ -92,6 +93,7 @@ Since I have been around baseball my whole life, I felt as though I had a pretty
  Mean   :370.0   Mean   :551.3   Mean   :107.7   Mean   :14.27  
  3rd Qu.:446.0   3rd Qu.:625.0   3rd Qu.:125.5   3rd Qu.:18.00  
  Max.   :659.0   Max.   :835.0   Max.   :190.0   Max.   :37.00  
+ 
        HR              RBI              TB            SLGperc      
  Min.   :  7.00   Min.   :156.0   Min.   : 493.0   Min.   :0.3220  
  1st Qu.: 26.00   1st Qu.:267.5   1st Qu.: 682.0   1st Qu.:0.4265  
@@ -99,6 +101,7 @@ Since I have been around baseball my whole life, I felt as though I had a pretty
  Mean   : 40.28   Mean   :333.1   Mean   : 807.7   Mean   :0.4664  
  3rd Qu.: 52.00   3rd Qu.:406.5   3rd Qu.: 923.5   3rd Qu.:0.5065  
  Max.   :101.00   Max.   :596.0   Max.   :1378.0   Max.   :0.6180  
+ 
        BB             HBP               SO             GDP       
  Min.   :101.0   Min.   : 19.00   Min.   :212.0   Min.   : 7.00  
  1st Qu.:151.0   1st Qu.: 38.00   1st Qu.:269.0   1st Qu.:22.00  
@@ -106,6 +109,7 @@ Since I have been around baseball my whole life, I felt as though I had a pretty
  Mean   :183.7   Mean   : 54.34   Mean   :299.2   Mean   :28.13  
  3rd Qu.:211.5   3rd Qu.: 64.00   3rd Qu.:325.0   3rd Qu.:34.00  
  Max.   :323.0   Max.   :124.00   Max.   :413.0   Max.   :56.00  
+ 
      Obperc             SF              SH             SBB        
  Min.   :0.3210   Min.   : 9.00   Min.   : 8.00   Min.   : 14.00  
  1st Qu.:0.3770   1st Qu.:17.50   1st Qu.:22.00   1st Qu.: 37.00  
@@ -113,6 +117,7 @@ Since I have been around baseball my whole life, I felt as though I had a pretty
  Mean   :0.3961   Mean   :23.14   Mean   :31.75   Mean   : 54.83  
  3rd Qu.:0.4140   3rd Qu.:28.00   3rd Qu.:39.00   3rd Qu.: 67.50  
  Max.   :0.4610   Max.   :41.00   Max.   :73.00   Max.   :142.00  
+ 
       ATT          SBB.ATTperc    
  Min.   : 25.00   Min.   :0.4840  
  1st Qu.: 51.50   1st Qu.:0.6965  
@@ -191,3 +196,4 @@ Since I have been around baseball my whole life, I felt as though I had a pretty
  Max.   :35.00   Max.   :0.9150   Max.   :34.00   Max.   :5.0000  
  
  While the summary function in R provides good information regarding some baseline statistics, it does not help with visualization of the data. I think that a good place to start with data visualization is distribution. I believe this is also an important aspect of the data to examine in this particular case given the relatively small size of the data set. If any variables are extremely skewed to one side or the other in terms of distribution, they may do more harm than good when it comes to modeling. The distribution of each variable can be seen below.
+
