@@ -197,4 +197,4 @@ Since I have been around baseball my whole life, I felt as though I had a pretty
  
  While the summary function in R provides good information regarding some baseline statistics, it does not help with visualization of the data. I think that a good place to start with data visualization is distribution. I believe this is also an important aspect of the data to examine in this particular case given the relatively small size of the data set. If any variables are extremely skewed to one side or the other in terms of distribution, they may do more harm than good when it comes to modeling. The distribution of each variable can be seen below.
 
-<img src="Density_Batt_1.jpeg">
+<img src="images/Density_Batt_1.jpeg">
