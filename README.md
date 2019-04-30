@@ -233,11 +233,11 @@ Call:
 
 The following pictures are of an excel file containing the top 10 statistics as determined by the random forest for each team in each year. I have created average measures for the batting statistics and for two of the pitching statistics. I did not average the number of innings pitched nor did I average the number of putouts for each team. This is because the higher the number of innings pitched the better, but for the other two pitching stats, the lower the numbers the better. Putouts is also the only pure fielding statistic in the list, and it does not make sense to average a fielding stat with batting or pitching stats. If the random forest is right and these are the most important variables in determing wins, then the team with the highest average of batting stats(hits, runs scored, total bases, at-bats, and runs batted in),highest number of innings pitched, highest number of putouts, and lowest average of AVGagaisnt and ERA should have the most number of wins. I have color coded all these numbers to help visualize the best and worst numbers more eaisly. 
 
-<img src = "images/color_coded_stats_0405.jpeg">
-<img src = "images/color_coded_stats_0607.jpeg">
-<img src = "images/color_coded_stats_0809.jpeg">
-<img src = "images/color_coded_stats_1011.jpeg">
-<img src = "images/color_coded_stats_1213.jpeg">
-<img src = "images/color_coded_stats_1415.jpeg">
-<img src = "images/color_coded_stats_1617.jpeg">
-<img src = "images/color_coded_stats_18.jpeg">
+<img src = "images/color_coded_stats_0405.png">
+<img src = "images/color_coded_stats_0607.png">
+<img src = "images/color_coded_stats_0809.png">
+<img src = "images/color_coded_stats_1011.png">
+<img src = "images/color_coded_stats_1213.png">
+<img src = "images/color_coded_stats_1415.png">
+<img src = "images/color_coded_stats_1617.png">
+<img src = "images/color_coded_stats_18.png">
