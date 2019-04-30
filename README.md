@@ -10,65 +10,65 @@ Most of the cleaning that was necessary for this project was done in excel. The 
 
 ## Batting Statistics
 
-       AVG: Batting Average,
-       G: Games Played,
-       AB: At-bats,
-       R: Runs scored,
-       H: Hits,
-       DOUBLES (originally 2B): Doubles,
-       TRIPLES (originally 3B): Triples,
-       HR: Homeruns,
-       RBI: Runs Batted In,
-       TB: Total Bases,
-       SLGperc: Slugging Percentage,
-       BB: Base on Balls (Walks),
-       HBP: Hit by Pitch,
-       SO: Strikeouts,
-       GDP: Ground Ball Doubles Plays Hit Into,
-       Obperc: On-base percentage,
-       SF: Sacrifice Flies,
-       SH: Sacrifice Hits,
-       SBB: Stolen Bases,
-       ATT: Stolen Base Attempts,
+       AVG: Batting Average
+       G: Games Played
+       AB: At-bats
+       R: Runs scored
+       H: Hits
+       DOUBLES (originally 2B): Doubles
+       TRIPLES (originally 3B): Triples
+       HR: Homeruns
+       RBI: Runs Batted In
+       TB: Total Bases
+       SLGperc: Slugging Percentage
+       BB: Base on Balls (Walks)
+       HBP: Hit by Pitch
+       SO: Strikeouts
+       GDP: Ground Ball Doubles Plays Hit Into
+       Obperc: On-base percentage
+       SF: Sacrifice Flies
+       SH: Sacrifice Hits
+       SBB: Stolen Bases
+       ATT: Stolen Base Attempts
        SBB-ATTperc : Stolen Base percentage
 
 ## Pitching Statistics
 
-       ERA: Earned Run Average,
-       W: Team Wins,
-       CG: Complete Games,
-       SHO: Shutouts,
-       CBO: Complete Game Shutouts,
-       SV: Saves,
-       IP: Innings Pitched,
-       Hallowed: Hits allowed,
-       Rallowed: Runs allowed,
-       ER: Earned Runs,
-       BBallowed: Walks allowed,
-       SOfor: Number of strikeouts thrown,
-       DOUBLESAllowed: Doubles Allowed,
-       TRIPLESAllowed: Triples Allowed,
-       HRAllowed: Home Runs Allowed,
-       ABagainst: At-bats against,
-       AVGagainst: Batting average against,
-       WP: Wild Pitches,
-       HBPpithcing: Number of batters hit by a pitch,
-       BK: Balks,
-       SFA: Sacrifice Flies Against,
+       ERA: Earned Run Average
+       W: Team Wins
+       CG: Complete Games
+       SHO: Shutouts
+       CBO: Complete Game Shutouts
+       SV: Saves
+       IP: Innings Pitched
+       Hallowed: Hits allowed
+       Rallowed: Runs allowed
+       ER: Earned Runs
+       BBallowed: Walks allowed
+       SOfor: Number of strikeouts thrown
+       DOUBLESAllowed: Doubles Allowed
+       TRIPLESAllowed: Triples Allowed
+       HRAllowed: Home Runs Allowed
+       ABagainst: At-bats against
+       AVGagainst: Batting average against
+       WP: Wild Pitches
+       HBPpithcing: Number of batters hit by a pitch
+       BK: Balks
+       SFA: Sacrifice Flies Against
        SHA: Sacrifice Hits Against
 
 ## Fielding Statistics
 
-       C: Chances,
-       PO: Put-outs,
-       A: Assists,
-       E: Errors,
-       FLDperc: Fielding Percentage,
-       DPs: Double Plays Turned,
-       SBA: Stolen Bases Allowed,
-       CSB: Caught Stealing By (pitcher and catcher),
-       SBAperc: Stolen Bases Allowed percentage,
-       PB: Passed Balls,
+       C: Chances
+       PO: Put-outs
+       A: Assists
+       E: Errors
+       FLDperc: Fielding Percentage
+       DPs: Double Plays Turned
+       SBA: Stolen Bases Allowed
+       CSB: Caught Stealing By (pitcher and catcher)
+       SBAperc: Stolen Bases Allowed percentage
+       PB: Passed Balls
        CI: Catcher’s Interference
 
 The RMAC was somewhat inconsistent in the format they used to upload data to their website as well as in the statistics that they chose to include in their data sets. For the years 2017 and 2018, several statistical categories were not included in the data, and thus were returned as missing values in my data set. Missing data returns an error message when attempting to implement certain algorithms in R, so I decided to do some imputation to make the data set complete. Using the MICE package in R, I was able to perform Predictive Mean Matching (PMM) to impute the missing values. In total, there were 288 missing variables that I replaced with imputed values. It is not ideal to impute missing values, especially in a predictive problem such as this one. However, by using the MICE package and PMM, I hoped to impute the most accurate predictions I possibly can in the data. 
@@ -225,3 +225,6 @@ Call:
 
           Mean of squared residuals: 9.984276
                     % Var explained: 91.97
+
+### Variable Importance Plot
+<img src = "images/VarImpPlot.jpeg">
