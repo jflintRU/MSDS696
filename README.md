@@ -210,4 +210,18 @@ Given the relative normality of the data, I thought a good place to get a baseli
 ### Top 3 Pitching Correlations
 <img src = "images/Scatter_Pitch_02.jpeg">
 
+Based on the tables and graphs, it can be seen that for batting, Runs Scored (R), Runs Batted In (RBI), and Hits (H) have strong positive correlations with wins. For fielding, Putouts (PO), Chances (C), and Assists (A) are positively correlated with wins. Lastly, for pitching, Innings Pitched (IP), and Strikeouts thrown (SOfor) have positive correlations with wins while Earned Run Average (ERA) has a strong negative correlation. It can also be seen that quite a few of the variables in the batting category exhibit strong positive correlations with wins. Additionally, the top three variables in the batting category have the highest R values. This is an interesting observation that I will keep in mind as I move into creating a random forest and determining variable importance. 
 
+## Random Forest 
+
+I have chosen to use a random forest in order to predict RMAC winners, and determine variables importance. The advantage to using Random Forest is that the algorithm decorrelates trees which in turn decreases variance and boosts accuracy. The results of the random forest and the variable importance can be seen below.
+
+Call:
+ 
+ randomForest(formula = W ~ ., data = Train, importance = TRUE) 
+               Type of random forest: regression
+                     Number of trees: 500
+No. of variables tried at each split: 17
+
+          Mean of squared residuals: 9.984276
+                    % Var explained: 91.97
