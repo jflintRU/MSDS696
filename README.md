@@ -218,10 +218,10 @@ I have chosen to use a random forest in order to predict RMAC winners, and deter
 
 Call:
  
- randomForest(formula = W ~ ., data = Train, importance = TRUE) 
+        randomForest(formula = W ~ ., data = Train, importance = TRUE) 
                Type of random forest: regression
                      Number of trees: 500
-No. of variables tried at each split: 17
+       No. of variables tried at each split: 17
 
           Mean of squared residuals: 9.984276
                     % Var explained: 91.97
