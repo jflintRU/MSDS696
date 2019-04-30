@@ -201,8 +201,8 @@ Since I have been around baseball my whole life, I felt as though I had a pretty
 
 Given the relative normality of the data, I thought a good place to get a baseline idea of some variable importance would be doing some correlation analysis. I did a correlation analysis for all the variables in three broad categories of batting, fielding, and pitching, and then visalized the top three from each cateogry. These visualizations can be seen below. 
 
-<img src = "images/Batting_Correlation_Graphs.jpeg">
-<img src = "images/Fielding_Correlation_Graphs.jpeg">
-<img src = "images/Pitching_Correlations_Graphs.jpeg">
+<img src = "images/Scatter_Batt_Corr.jpeg">
+<img src = "images/Scatter_Fld_Corr.jpeg">
+<img src = "images/Scatter_Pitch_Corr.jpeg">
 
 
