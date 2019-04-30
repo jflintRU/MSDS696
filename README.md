@@ -203,8 +203,10 @@ Given the relative normality of the data, I thought a good place to get a baseli
 
 ### Top 3 Batting Correlations
 <img src = "images/Scatter_Batt_Corr_03.jpeg">
+
 ### Top 3 Fielding Correlations
 <img src = "images/Scatter_Fld_Corr_02.jpeg">
+
 ### Top 3 Pitching Correlations
 <img src = "images/Scatter_Pitch_02.jpeg">
 
