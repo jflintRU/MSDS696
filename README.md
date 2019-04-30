@@ -203,6 +203,6 @@ Given the relative normality of the data, I thought a good place to get a baseli
 
 <img src = "images/Scatter_Batt_Corr_03.jpeg">
 <img src = "images/Scatter_Fld_Corr_02.jpeg">
-<img src = "images/Scatter_Pitch_Corr_02.jpeg">
+<img src = "images/Scatter_Pitch_02.jpeg">
 
 
