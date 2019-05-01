@@ -297,3 +297,13 @@ Pitching: The necessity of pitching more innings to win games indicates that is 
 Hitting/Fielding: First and foremost hitters need to get hits. This means having hitters that can hit for average and get on base. Ideally these hitters will have a bit of speed to them as well leading them to increase the total number of bases they are able to touch,  and increasing their odds of scoring on subsequent hits once they are on base. This being said, another component of total bases is having some guys that can drive the ball and hit stand up doubles and home runs. Power in the line-up will also boost RBI numbers. Lastly in terms of hitting, the bottom of the line-up being able to “turn over” the lineup and get the top of the order back up will boost the number of at-bats the team will get which is another important factor in winning games. This also implies that finding good hitters is an important piece when it comes to recruiting players. So much so, that it may be better to recruit naturally good hitters that may not be as good at fielding, and then train them to become better hitters once they are at school.  This being said, it would be interesting to conduct a study purely dedicated to position players that divides data based on offensive and defensive statistics. This might give a coaching staff a better idea of which positions need to be solid defenders (which may come at the expense of good offensive numbers), and which positions need to be better hitters which may come at the expense of better defense. 
 
 
+## References
+
+https://www.r-bloggers.com/how-to-implement-random-forests-in-r/
+https://datascienceplus.com/random-forests-in-r/
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (2015). An Introduction to Statistical Learning: With applications in R (7th ed.). New York: Springer. 
+https://www.statmethods.net/advgraphs/layout.html
+https://www.rdocumentation.org/packages/ggpubr/versions/0.2/topics/ggscatter
+https://www.rdocumentation.org/packages/ggpubr/versions/0.2/topics/ggarrange
+https://datascienceplus.com/imputing-missing-data-with-r-mice-package/
+https://statistical-programming.com/predictive-mean-matching-imputation-method/
