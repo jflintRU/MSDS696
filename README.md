@@ -6,7 +6,19 @@ The Rocky Mountain Athletic Conference is an NCAA division II athletic conferenc
 ## Data Collection and Cleaning
 
 The RMAC baseball archives keep statistics that date back to the 2004 season. I collected all team statistics available on the RMAC website from years 2004-2018. The team statistics were divided into three categories that included “overall statistics”, “pitching statistics”, and “fielding statistics”. The “pitching statistics” category and the “fielding statistics” category contained unique measures, however the “overall statistics” category did contain some repeat statistics. I downloaded all the data sets from the RMAC website and loaded them into excel spreadsheets. I was able to use the “text-to-columns” function in excel to get the data into the proper format in excel, and then converted my excel worksheet into a csv file. 
-Most of the cleaning that was necessary for this project was done in excel. The cleaning in excel included combining the yearly data into a single worksheet and then ensuring that the formatting of the single combined spreadsheet was acceptable for use. Once cleaning in excel was complete, I saved the worksheet as a csv file and uploaded it into Rstudio to begin work on the data. In total, the data set is comprised of 123 rows of 56 variables(columns) for a total of 6,888 total observations. All variables expect one are numeric. One of the variables is also the dependent variable that I will be attempting to predict. This leaves 53 variables that will be used for prediction. The acronyms for the variables in the data are as follows:
+Most of the cleaning that was necessary for this project was done in excel. The cleaning in excel included combining the yearly data into a single worksheet and then ensuring that the formatting of the single combined spreadsheet was acceptable for use. Once cleaning in excel was complete, I saved the worksheet as a csv file and uploaded it into Rstudio to begin work on the data. In total, the data set is comprised of 123 rows of 56 variables(columns) for a total of 6,888 total observations. All variables expect one are numeric. One of the variables is also the dependent variable that I will be attempting to predict. This leaves 53 variables that will be used for prediction. The acronyms for the variables and various teams in the RMAC in the data are as follows:
+
+## Teams
+       ASU: Adams State University
+       CCU: Colorado Christian University
+       CMU: Colorado Mesa University
+       CSM: Colorado School of Mines
+       CSUP: Colorado State University - Pueblo
+       FHSU: Fort Hays State University
+       MSUD: Metropolitan State Unviersity of Denver
+       NMHU: New Mexico Highlands University
+       Regis: Regis University
+       UNK: University of Nebraska - Kearney
 
 ## Batting Statistics
 
@@ -229,6 +241,21 @@ Call:
 ### Variable Importance Plot
 <img src = "images/VarImpPlot.jpeg">
 
+Based on the random forest, the top 10 most important variables for winning baseball games are as follows:
+       
+       1.	Innings Pitched
+       2.	Putouts
+       3.	Batting Average Against
+       4.	Strikeouts for pitching staff
+       5.	Hits
+       6.	Earned Run Average
+       7.	Runs Scored
+       8.	Total Bases
+       9.	At-bats
+       10.	Run Batted In
+
+
+
 ## Analysis 
 
 The following pictures are of an excel file containing the top 10 statistics as determined by the random forest for each team in each year. I have created average measures for the batting statistics and for two of the pitching statistics. I did not average the number of innings pitched nor did I average the number of putouts for each team. This is because the higher the number of innings pitched the better, but for the other two pitching stats, the lower the numbers the better. Putouts is also the only pure fielding statistic in the list, and it does not make sense to average a fielding stat with batting or pitching stats. If the random forest is right and these are the most important variables in determing wins, then the team with the highest average of batting stats(hits, runs scored, total bases, at-bats, and runs batted in),highest number of innings pitched, highest number of putouts, and lowest average of AVGagaisnt and ERA should have the most number of wins. I have color coded all these numbers to help visualize the best and worst numbers more eaisly. Cells that are entirely red to the right of the averaged numbers represent outliers. 
@@ -242,5 +269,31 @@ The following pictures are of an excel file containing the top 10 statistics as 
 <img src = "images/color_coded_stats_1617.png">
 <img src = "images/color_coded_stats_18.png">
 
-As far as winners are concerned, the only year that was incorrectly predicted by the random forest was 2010. New Mexico Highlands University (NMHU) won the most number of games that year, but the random forest predicted that Colorado Mesa University (CMU) would win more. Examing this data more in-depth, it can be seen that New Mexico Highlands had worse numbers than Colorado Mesa in all of the top 10 most important statistical categories excepth AVGagainst and ERA for which they had better numbers. Natrually, the random forest predicted that the team with the higher number of better statistics would win more games. However, going back to the variable importance, most of the hitting statistics within the top 10 were below the statistics of AVGagainst and ERA. So while Colorado Mesa may have had a better year hitting than New Mexico Highlands, they did not pitch as well, and this is what led to them winning fewer games than what the random forest predicted. Thus, based on this case, it is safe to say that pitching plays a very important role in winning games in the RMAC. 
-I hypothesize that because only two of the top 10 predictors were worse than the actual first place team New Mexico Highlands (NMHU), the random forest predicted CMU to win. Going back to the variable importance real quick, Avgagainst was the 3rd most important and ERA was the 6th most important. Both are ahead of most batting statistics as far as variable importance is concerned. So although CMU had good offensive numbers that year, the top-notch pitching on the part of NMHU led them to more overall wins. 
+As far as winners are concerned, the only year that was incorrectly predicted by the random forest was 2010. New Mexico Highlands University (NMHU) won the most number of games that year, but the random forest predicted that Colorado Mesa University (CMU) would win more. Examing this data more in-depth, it can be seen that New Mexico Highlands had worse numbers than Colorado Mesa in all of the top 10 most important statistical categories except AVGagainst and ERA for which they had better numbers. Natrually, the random forest predicted that the team with the higher number of better statistics would win more games. However, while Colorado Mesa may have had a better year hitting than New Mexico Highlands, they did not pitch as well, and this is what led to Colorado Mesa winning fewer games than what the random forest predicted. Thus, based on this case, it is safe to say that pitching plays a very important role in winning games in the RMAC, however, more on this in the next section.
+
+## Conclusion/Insights
+
+Based on the findings from the excel tables above, I conclude that the variable importance as determined by the random forest is currently an accurate representaion of the statistical categories most important when it comes to winning games in the RMAC.
+
+At first thought, Innings Pitched (the top variable) does not seems as though it should have a large effect on wins. It is not a performance measure and to many may simply seem like a statistic that is recorded just to help with the calculation of other statistics. However, upon deeper analysis, it can be inferred that the more innings a team pitches, the more games the team is winning on the road. The only way that a visiting team would have to pitch the bottom of the 9th or 7th inning would be if the visiting team was ahead of the home team in the final inning of play, or the game was tied in the final inning of play. Either way, a team that wins on the road will have more innings pitched than a team that loses on the road. If roughly half the games a team plays during the season are road games, this means a significant portion of wins must come on the road. 
+
+Coming in at number two is Putouts. Putouts can be thought of in a similar way to innings pitched. Every out in a baseball game is recorded as a putout and someone is credited with the putout. Therefore, the only way for one team to have more putouts than another team if they are playing more innings on the road. If a team is not winning a game on the road after the top of the 9th or 7th inning there will be no bottom of the 9th or 7th, and therefore no opportunity for that team to record three more putouts. Thus, a higher number of putouts indicates more innings played which indicates a higher likelihood that games on the road result in wins. Just as it is important to have pitchers that can throw a lot of innings, it is equally as important to have position players capable of playing everyday. 
+
+The next two most important variables (numbers 3 and 4) are pithcing staistics. These are Batting Average Against and Strikouts recorded by the pitching staff respectively. The faxt that three of the top four most important variables are pitching statistics reinforces the point that pitching is a key factor in winning games. A low batting avergae against means that opposing hitters are not getting on base. A high number of strikeouts for the pitching staff also means that opposing hitters are not even putting the ball in play which all but elimintes any opportunity for the opposing team to score runs. All this being said, there is one caveat to batting average against being thought of as purely a pitching statistic though. The factor that this particular statistic does not directly measure is the solid defensive play behind the pitcher that turns what could be potential hits for the opposing team into outs. Outstanding defensive plays that rob the opposing team of a hit help lower the batting average aginst for pitchers. However, if a pitcher consistently limits the number of balls the opposing team hits hard, many of the plays that a defense has to make may be thought of as "routine". In any the importance of a low average against implies the need for a defense capable of at least making all the "routine" plays on a consistent basis, and a pitcher that can throw strikeouts. 
+
+\Hits is the next most important variable and the first that is offensive. This means that first and foremost hitters need to get hits. Hits means base runners, and getting more hits with runners on base means scoring runs. 
+
+Coming in at number 6 is Earned Run Average. This is another pitching statistic and the lower the ERA of the pitching staff the better. A low ERA will be the result of pitching a lot of innings while limiting the number of hits the other teams gets (low batting average against), and throwing a high number of strikeouts. 
+
+The last four variables in the top 10 (numbers 7-10) are all offensive and are all intuitively important. The more runs the team scores, the better. Scoring more runs that the other team means winning the game. In order to score runs, hitters need to get on base, and then more hiters need to get more hits to score those runs (reinforcing the importance of Hits). Of course it helps when pitching can limit the number of runs the other team scores as well. Scoring runs also means that hitters are touching more bases, increasing the total bases measure for the team. For every run that is scored, total bases is equal to four. Hitter will get more total bases by getting hits or drawing walks (either outcome is a quality at-bat) and then running the bases well. As for at-bats, more hits leads to more at-bats which in turn leads to the opportunity to drive in more runs and boost RBI numbers. 
+
+The next four variables (numbers 5-8) are offensive variables. They are hits (H), runs scored (R), runs batted in (RBI), and at bats (AB). While pitching is clearly an important factor in winning games, the only way a team can win a game is to score more runs than the other team which comes from the offense. The more hits a team gets, the more runners it will have on base. The more runners on base, the more opportunities there are to score runs through good base running and more timely hitting. At-bats is a similar measure to innings pitched in that it may seem as though it is a statistic that is recorded just to help in the calculation of other statistics. However, similar to innings pitched, the more at-bats a team has, the more times that team is going through their lineup while hitting which means more hitters are reaching base safely. The more hitters that reach base safely, the more opportunities there are to score runs. 
+
+
+## Recomendations for the coaches
+
+Pitching: The necessity of pitching more innings to win games indicates that is important for a team to have a pitching staff with starters that can pitch deep into games, a bullpen comprised of arms capable of pitching in multiple games during a series, a starting rotation/bullpen that has a good amount of depth, or all the above. Recruiting pitchers that are projectable when it comes to throwing a lot of innings, and implimenting training regiments designed to preserve and strenghten the throwing arm of pitchers becomes a crucial element for a team to win games in the RMAC. Pitchers that can limit the number of hits the opposing team can get by either generating weak contact and/or throwing a high number of strikeouts is also an importanct component within the pitching staff. 
+
+Hitting/Fielding: First and foremost hitters need to get hits. This means having hitters that can hit for average and get on base. Ideally these hitters will have a bit of speed to them as well leading them to increase the total number of bases they are able to touch,  and increasing their odds of scoring on subsequent hits once they are on base. This being said, another component of total bases is having some guys that can drive the ball and hit stand up doubles and home runs. Power in the line-up will also boost RBI numbers. Lastly in terms of hitting, the bottom of the line-up being able to “turn over” the lineup and get the top of the order back up will boost the number of at-bats the team will get which is another important factor in winning games. This also implies that finding good hitters is an important piece when it comes to recruiting players. So much so, that it may be better to recruit naturally good hitters that may not be as good at fielding, and then train them to become better hitters once they are at school.  This being said, it would be interesting to conduct a study purely dedicated to position players that divides data based on offensive and defensive statistics. This might give a coaching staff a better idea of which positions need to be solid defenders (which may come at the expense of good offensive numbers), and which positions need to be better hitters which may come at the expense of better defense. 
+
+
