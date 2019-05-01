@@ -300,10 +300,17 @@ Hitting/Fielding: First and foremost hitters need to get hits. This means having
 ## References
 
 https://www.r-bloggers.com/how-to-implement-random-forests-in-r/
+
 https://datascienceplus.com/random-forests-in-r/
+
 James, G., Witten, D., Hastie, T., & Tibshirani, R. (2015). An Introduction to Statistical Learning: With applications in R (7th ed.). New York: Springer. 
+
 https://www.statmethods.net/advgraphs/layout.html
+
 https://www.rdocumentation.org/packages/ggpubr/versions/0.2/topics/ggscatter
+
 https://www.rdocumentation.org/packages/ggpubr/versions/0.2/topics/ggarrange
+
 https://datascienceplus.com/imputing-missing-data-with-r-mice-package/
+
 https://statistical-programming.com/predictive-mean-matching-imputation-method/
