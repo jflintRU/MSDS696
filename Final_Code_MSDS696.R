@@ -186,7 +186,8 @@ install.packages("randomForest")
 library(randomForest)
 RF.wins_withmice <- randomForest(W~., data = Train, importance = TRUE)
 print(RF.wins_withmice)
-importance(RF.wins_withmice)
+Importance <- data.frame(importance(RF.wins_withmice, type = 1))
+write.csv(Importance, "Variable_Importance_Table.csv")
 varImpPlot(RF.wins_withmice, type = 1, main = "Variable Importance")
 
 #Create tables to analyze predictions vs actual number of wins
