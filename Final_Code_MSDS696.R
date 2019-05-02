@@ -206,7 +206,7 @@ library(readxl)
 Rank_Column <- read_excel("Rank_Column.xlsx")
 Final_Predictions_with_Ranks <- cbind(Prediction_Final_DF, Rank_Column)
 View(Final_Predictions_with_Ranks)
-DF_Final_Predictions_with_Ranks <- data.frame(Final_Predictions_with_Ranks)data.frame()
+DF_Final_Predictions_with_Ranks <- data.frame(Final_Predictions_with_Ranks)
 write.csv(DF_Final_Predictions_with_Ranks, "Final_Predictions_with_Ranks")
 VarImportance_withmice <- data.frame(sort(importance(RF.wins_withmice)[,1], decreasing = TRUE))
 
