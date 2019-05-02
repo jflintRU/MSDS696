@@ -1,9 +1,9 @@
 library(readr)
 All_Years <- read_csv("All_Years.csv")
 View(All_Years)
-install.packages("mice")
 
 #imput missing vales
+install.packages("mice")
 library(mice)
 set.seed(100)
 DF.miss <- data.frame(All_Years[,c(3:56)])
@@ -211,8 +211,8 @@ library(readxl)
 Rank_Column <- read_excel("Rank_Column.xlsx")
 Final_Predictions_with_Ranks <- cbind(Prediction_Final_DF, Rank_Column)
 View(Final_Predictions_with_Ranks)
-DF_Final_Predictions_with_Ranks <- data.frame(Final_Predictions_with_Ranks)data.frame()
-write.csv(DF_Final_Predictions_with_Ranks, "Final_Predictions_with_Ranks.csv;")
+DF_Final_Predictions_with_Ranks <- data.frame(Final_Predictions_with_Ranks)
+write.csv(DF_Final_Predictions_with_Ranks, "Final_Predictions_with_Ranks.csv")
 VarImportance_withmice <- data.frame(sort(importance(RF.wins_withmice)[,1], decreasing = TRUE))
 
 #Create Excel file for analysis
