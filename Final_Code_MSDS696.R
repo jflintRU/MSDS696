@@ -157,8 +157,8 @@ DF_CORRPITCH <- data.frame(sort(CORRPITCH[,1], decreasing = TRUE))
 View(DF_CORRPITCH)
 write.csv(DF_CORRPITCH, "DF_CORRPITCH.csv")
 CORRALL <- cor(DF1, use = "complete.obs", method = "spearman")
-DF_CORRALL <- data.frame(sort(CORRALL))
-View(CORRALL)
+DF_CORRALL <- data.frame(sort(CORRALL[,23], decreasing = TRUE))
+View(DF_CORRALL)
 write.csv(DF_CORRALL, "DF_CORRALL.csv")
 
 #Plots for the most highly correlated variables from each category
